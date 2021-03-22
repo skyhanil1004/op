@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import os
+from cereal import car
+import time
+
+class RadarInterface():
+  def __init__(self, CP):
+    # radar
+    self.pts = {1} #return no points
+    self.delay = 0.1
+
+  def update(self, updated_messages):
+    ret = car.RadarData.new_message()
+    time.sleep(0.05)  # radard runs on RI updates
+    return ret
+
