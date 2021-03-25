@@ -1,7 +1,11 @@
+# flake8: noqa
+
 from selfdrive.car import dbc_dict
+from cereal import car
+Ecu = car.CarParams.Ecu
 
 
-class SteerLimitParams:
+class CarControllerParams:
   STEER_MAX = 1023        # 262 faults
   STEER_DELTA_UP = 5     # 3 is stock. 100 is fine. 200 is too much it seems
   STEER_DELTA_DOWN = 10    # no faults on the way down it seems
@@ -22,8 +26,7 @@ FINGERPRINTS = {
 
 DBC = {
   CAR.RANGEROVER_2017_VOGUE: dbc_dict(
-    'landrover_rangerover_2017_vogue',  # 'pt' 
-	 None),  # 'radar'
+    'landrover_rangerover_2017_vogue', None),  # 'pt' 
 }
 
 STEER_THRESHOLD = 1023
